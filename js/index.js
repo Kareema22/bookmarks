@@ -30,12 +30,17 @@ function addBookmark() {
     };
 
     if (!bookmark.name) {
-        alert("name not valid")
+        alert("Name can't be empty")
+        return
+    }
+
+    if (!bookmark.url) {
+        alert("URL can't be empty")
         return
     }
 
     if (!isValidUrl(bookmark.url)) {
-        alert("url not valid")
+        alert("Invalid URL")
         return
     }
 
